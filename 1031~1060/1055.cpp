@@ -25,16 +25,16 @@ int main(){
    }
    sort( v.begin(), v.end() );
    for(int k = 1; k <= Q; k++){
-   	  int n, Amin, Amax, cnt= 0;
+      int n, Amin, Amax, cnt= 0;
       scanf("%d %d %d", &n, &Amin, &Amax);
-      printf("Case #%d:\n", k);
-	    for(int i = 0; i < N; i++){
-	        if( v[i].Age >= Amin && v[i].Age <= Amax ){
-	  	       printf("%s %d %d\n", v[i].Name, v[i].Age, v[i].Worth);
-	  	       if(++cnt == n) break;
-	       }      
-	    }
-	  	if( !cnt ) printf("None\n");
-	  }
+      printf("Case #%d:\n", k); 
+      for(int i = 0; i < N; i++){
+	   if( v[i].Age >= Amin && v[i].Age <= Amax ){
+	        printf("%s %d %d\n", v[i].Name, v[i].Age, v[i].Worth);
+	  	if(++cnt == n) break;
+	   }      
+      }
+      if( !cnt ) printf("None\n");
+   }
    return 0;
 }
