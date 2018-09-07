@@ -16,11 +16,11 @@ int main() {
     } else {
         printf("Merge Sort\n");
         int k = 1;
-		bool ok = false;
+	bool ok = false;
         while( !ok ) {
             ok = true;
             for (i = 0; i < n; i++) if( a[i] != b[i] )
-               ok = false;
+            ok = false;
             k *= 2;
             for (i = 0; i < n/k; i++)  sort( a+i*k, a+(i+1)*k );
             sort( a+n/k*k, a+n );
