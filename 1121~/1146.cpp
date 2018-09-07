@@ -22,7 +22,6 @@ int main(){
       bool ok = true;
       for(int i = 0; i < N; i++){
          scanf("%d", &x);
-         //x tutong
          if( degree[x] ) ok = false;
          if( !ok ) continue;
          for(int j = 0; j < u[x].size(); j++)
