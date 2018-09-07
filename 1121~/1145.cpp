@@ -20,7 +20,7 @@ int main(){
       for(int j = 0; j < N; j++) if( !hash[ (x+j*j)%N ] ) {
           hash[ (x+j*j)%N ] = x;
           ok = true;
-		  break;
+	  break;
       }
       if( !ok ) printf("%d cannot be inserted.\n", x);
    }
@@ -30,7 +30,7 @@ int main(){
       for(int j = 0; j <= N; j++){
          int v = hash[ (x+j*j)%N ];
          cnt++;
-		 if( !v || v == x)  break;
+         if( !v || v == x)  break;
       }
    }
    printf("%.1f\n", cnt*1.0/Q);
