@@ -13,14 +13,11 @@ void form(ll A, ll B){
    B = B / K;
    bool ok = false;
    if( (A < 0 && B > 0) || (A > 0 && B < 0) ){ cout << "(-";  ok = true;}A = abs(A); B = abs(B);
- 
-   
-      if(A >= B)  {
-         cout << A/B;
-         if( A = A%B ) cout << " ";
-      }
-      if( A )  cout << A << '/' << B;
-   
+   if(A >= B)  {
+      cout << A/B;
+      if( A = A%B ) cout << " ";
+   }
+   if( A )  cout << A << '/' << B;
    if( ok ) cout << ")";
 }
 
