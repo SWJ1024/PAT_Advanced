@@ -20,8 +20,8 @@ void bfs(int i){
       	 Q.pop();
       	 for(int j = 0; j < t.size(); j++) if( !c[ t[j] ] ){
       	    c[ t[j] ] = true;
-			Q.push( t[j] );
-		 }
+	    Q.push( t[j] );
+	 }
       }
    }
    cout << sum-1 << endl;
@@ -42,7 +42,6 @@ int main(){
    while( Q-- ){
       int x;
       scanf("%d", &x);
-     
       bfs(x);
    }
    return 0;
