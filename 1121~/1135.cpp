@@ -19,13 +19,12 @@ Tree build(Tree T, int x){
    return T;
 }
 
-
-int CNT = -1;
+int CNT;
 
 bool Check( Tree T, int flag, int cnt){	
    if( T == NULL ){
-   	   if( CNT == -1 ) CNT = cnt;
-	     if( cnt != CNT ) return false;
+       if( CNT == -1 ) CNT = cnt;
+       if( cnt != CNT ) return false;
        else return true;
    }
    cnt += ( T->v > 0 ? 1 : 0 );
