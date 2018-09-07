@@ -9,10 +9,11 @@ bool d[MAXN][MAXN];
 
 
 bool check( vector< int > &v ){
-	for(int i = 0; i < n; i++)
-        for(int j = i+1; j < n; j++) if( !d[v[i]][v[j]] )
-        	return false;   
-  return true;
+   for(int i = 0; i < n; i++)
+      for(int j = i+1; j < n; j++) 
+         if( !d[v[i]][v[j]] )
+             return false;   
+   return true;
 }
 
 bool check2( vector< int > &v, int i ){
@@ -31,25 +32,25 @@ int main(){
    }
    cin >> Q;
    while(Q--){
-   	  bool ok = false;
+      bool ok = false;
       vector< int > v;
       set< int > Myset;
       cin >> n;
       for(int i = 0; i < n; i++){
-		     scanf("%d", &x);
-		     v.push_back(x);
-		     Myset.insert(x);
+           scanf("%d", &x);
+           v.push_back(x);
+           Myset.insert(x);
       }
       if( !check( v ) ) cout << "Not a Clique\n";
-	    else{
-	      for(int i = 1; i <= N; i++) if( !Myset.count(i) ){
-	      	  if( check2( v, i ) ) {
-	      	  	 ok = true;
-	      	  	 break;
-	      	  }
-	      }
-	      if(!ok) cout << "Yes\n";
-        else cout << "Not Maximal\n";
+      else{
+	  for(int i = 1; i <= N; i++) if( !Myset.count(i) ){
+	     if( check2( v, i ) ) {
+	      	 ok = true;
+	      	 break;
+	     }
+	  }
+	  if(!ok) cout << "Yes\n";
+          else cout << "Not Maximal\n";
       }
    }
    return 0;
